@@ -123,11 +123,10 @@ const Post = ({ post }) => {
     <>
       <div className="flex gap-2 items-start p-4 border-b">
         <div className="avatar">
-          <Link
-            to={`/profile/${postOwner.username}`}
-            className="w-8 rounded-full overflow-hidden"
-          >
-            <img src={postOwner.profileImg || "/avatar-placeholder.png"} />
+          <Link to={`/profile/${postOwner.username}`}>
+            <div className="w-8 rounded-full overflow-hidden">
+              <img src={postOwner.profileImg || "/avatar-placeholder.png"} />
+            </div>
           </Link>
         </div>
         <div className="flex flex-col flex-1">
@@ -192,7 +191,7 @@ const Post = ({ post }) => {
                   <div className="flex flex-col gap-3 max-h-60 overflow-auto">
                     {post.comments.length === 0 && (
                       <p className="text-sm text-slate-500">
-                        Không có bình luận nào 🤔 hãy là người bình luận đầu tiên 😉
+                        Không có bình luận nào, hãy là người bình luận đầu tiên
                       </p>
                     )}
                     {post.comments.map((comment) => (

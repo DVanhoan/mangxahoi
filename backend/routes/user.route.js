@@ -16,5 +16,5 @@ router.get("/suggested", protectRoute, getSuggestedUsers);
 router.post("/follow/:id", protectRoute, followUnfollowUser);
 router.post("/update", protectRoute, updateUser);
 router.get("/frendships", protectRoute, getFriendsList);
-router.get("/search", protectRoute, findUsersLikeUsername);
+router.get("/search/:username", protectRoute, findUsersLikeUsername);
 export default router;

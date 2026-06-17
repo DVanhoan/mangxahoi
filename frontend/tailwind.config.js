@@ -14,8 +14,8 @@ export default {
 			{
 				black: {
 					...daisyUIThemes["black"],
-					primary: "rgb(29, 155, 240)",
-					secondary: "rgb(24, 24, 24)",
+					primary: "#1d9bf0",
+					secondary: "#181818",
 				},
 			},
 		],

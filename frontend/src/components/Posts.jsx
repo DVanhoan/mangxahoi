@@ -50,7 +50,7 @@ const Posts = ({ feedType, username, userId }) => {
   return (
     <>
       {!isLoading && !isRefetching && posts?.length === 0 && (
-        <p className="text-center my-4">Không có bài viết nào! 👻</p>
+        <p className="text-center my-4">Không có bài viết nào! </p>
       )}
       {!isLoading && !isRefetching && posts && (
         <div>

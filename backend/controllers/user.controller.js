@@ -198,7 +198,7 @@ export const getFriendsList = async (req, res) => {
 export const findUsersLikeUsername = async (req, res) => {
   try {
     const { username } = req.params;
-    const regex = new RegExp("[" + username.split("").join("") + "]", "i");
+    const regex = new RegExp(username, "i");
     const users = await User.find({ username: { $regex: regex } });
     if (!users || users.length === 0) {
       return res.status(404).json({ error: "No users found" });

@@ -111,8 +111,21 @@ const CreatePost = () => {
           onChange={handleImgChange}
         />
         {onPost && (text || img) && (
-          <div className="flex justify-end pt-2">
-            <button className="btn btn-primary rounded-full btn-sm text-white px-4">
+          <div className="flex justify-end pt-3">
+            <button
+              disabled={isPending}
+              className={`
+                px-5 py-2 rounded-full text-sm font-semibold
+                text-white
+                bg-gradient-to-r from-blue-500 to-indigo-500
+                shadow-md shadow-blue-500/30
+                hover:from-blue-600 hover:to-indigo-600
+                hover:shadow-lg hover:shadow-blue-500/40
+                active:scale-95
+                transition-all duration-200
+                disabled:opacity-60 disabled:cursor-not-allowed disabled:active:scale-100
+              `}
+            >
               {isPending ? "Posting..." : "Post"}
             </button>
           </div>

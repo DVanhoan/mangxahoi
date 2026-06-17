@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import { IoNotifications } from "react-icons/io5";
 import { FaFacebookMessenger, FaUser, FaSearch } from "react-icons/fa";
 import { useQuery } from "@tanstack/react-query";
-import useFrendships from "../hooks/useFrendships";
+import useSearchUser from "../hooks/useSeachUser";
 const Navbar = () => {
     const { data: authUser } = useQuery({ queryKey: ["authUser"] });
     const [searchTerm, setSearchTerm] = useState("");
-    const { data: searchResults, isLoading: isSearchLoading } = useFrendships(searchTerm);
+    const { data: searchResults, isLoading: isSearchLoading } = useSearchUser(searchTerm);
 
     return (
         <nav className="bg-white border-b border-gray-200 px-4 py-2.5 sticky top-0 z-50">
